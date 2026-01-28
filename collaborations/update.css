@@ -1,0 +1,71 @@
+#thumbnails{
+	margin:2%;
+	margin-top:15vh;
+	
+}
+
+
+
+header div.title{
+	position:fixed;
+	bottom:50vh;
+	
+}
+
+/* Not currently in use. Was in use when using waypoints */
+header div.title.abs{
+	position:absolute;
+	bottom:50vh;
+	top: auto;
+}
+header{border-bottom:0; margin-bottom:0;}
+
+
+#thumbnails a{
+	display:inline-block;
+	margin:2%;
+	width:10%;
+	border:3px solid #e4c7ac;
+	box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
+#thumbnails a:hover{border-color:white;}
+
+#fancybox-outer a{border:0;}
+
+#fancybox-wrap, #fancybox-wrap *{
+    -moz-box-sizing: content-box !important;
+    -webkit-box-sizing: content-box !important;
+    -safari-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+}
+
+
+hr {
+    border: none;
+    height: 10px;
+    /* Set the hr color */
+    color: #fff; /* old IE */
+    background-color: #fff; /* Modern Browsers */
+    width:100%;
+    margin:0;
+    position:relative;
+    z-index:5;
+}
+.projects{margin-top:106vh;}
+
+@media (max-width: 1250px){
+	#thumbnails a {width:9%;}
+}
+
+@media (max-width: 1000px){
+	#thumbnails{
+		
+	}	
+	.projects{margin-top:0;}
+	header div.title.abs, header div.title{
+		top:50%;
+		position:absolute;
+		bottom:auto;
+	}
+}

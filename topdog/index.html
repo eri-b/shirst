@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  
+
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Top Dog</title>
+  <meta name="description" content="Denim Typos. Come over.">
+  <link rel="icon" type="image/png" href="/images/fav.png">
+
+
+
+   <link rel="stylesheet" href="/css/main.css">
+  
+  <style>
+    body{
+      color:white;
+      -webkit-font-smoothing: antialiased;
+      text-align:center;
+      min-height:100%;
+      position:relative;
+    }
+
+    .addbg{background-color:#F1A9A0;}
+    
+    
+  
+    h1{padding:20px 30px; border:9px solid black; display:inline-block;}
+    h1:hover{background-color:rgba(255,255,255,.5);}
+    h1:nth-of-type(1){color:black;}
+    img{max-width:100%; display:inline-block; transition:.3s ease-in-out;}
+    img.big{width:100%; display:block;}
+    /*img.one{opacity:0;}*/
+
+    #down{
+      position:absolute; 
+      top: 92vh; 
+      right:30px; 
+      transition:.3s ease-in-out;
+      color:#000;
+      display:inline-block;
+      font-size:25px;
+      opacity:0;
+    }
+    #down.show{opacity:1;}
+    #down.show2{right:30px;}
+    .ctn{background:#fff; position:relative;}
+    .ctn a{position: absolute; display:inline-block; bottom:160px; left:50%; transform: translateX(-50%);}
+    
+    .moreimages img{margin-top:15vh;}
+    @media (max-width:700px){
+      h1{position:static; font-size:18px; border:3px solid black; padding:10px 15px;}
+      h1{width:100%; display:inline-block;}
+      .ctn a{bottom:50px;}
+    }
+  </style>  
+
+  <script src="https://use.typekit.net/luu1qlc.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+  
+</head>
+
+<body>
+
+<div class="ctn">
+<img class="one big" src="images/img1.jpg"/>
+
+<span id="down">&#11015;</span>
+
+<!-- <h1>More</h1> -->
+
+<div class="moreimages">
+<img src="images/img2.jpg"/>
+<img src="images/img3.jpg"/>
+<img src="images/img4.jpg"/>
+</div>
+
+<a href="http://store.shirst.com"><h1>Shop Now</h1></a>
+</div>
+<script src="/js/jq.js"></script>
+<script type="text/javascript">
+  $(window).load(function() {
+    // $('img.one.big').css('opacity','1');
+    // $('h1').css('opacity','1');
+    
+    setTimeout(function(){ $('span').addClass('show'); }, 2000);
+    setTimeout(function(){ $('span').addClass('show2'); }, 2300);
+    // setTimeout(function(){ $('body').addClass('addbg'); }, 1000);
+    
+  });
+
+  $(window).scroll(function() {
+    $('#down').css('opacity','0');
+  });
+
+</script>
+</body>
+
+</html>

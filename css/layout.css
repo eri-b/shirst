@@ -1,0 +1,60 @@
+/*  Here is the Layout CSS file. */
+
+.ctn {
+  margin: 0 auto;
+  max-width: 1170px;
+  position:relative;
+  padding: 60px 1.25em;
+}
+.ctn:after{
+	content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Place Cols in Rows please */
+.row:after{
+	content: "";
+  display: table;
+  clear: both;
+}
+
+.col{
+	position:relative;
+	float:left;
+	width:100%;
+	min-height:1px;
+}
+
+/* Columns */
+.col75{ width:75%;}
+.col66{ width:66.666666%;}
+.col50{	width:50%;}
+.col33{	width:33.333333%;}
+.col25{	width:25%;}
+
+.hide-desktop{  display: none !important;}
+
+
+
+@media (max-width: 767px){
+
+  .ctn {
+    padding: 1.5em 1.25em;
+  }
+
+  .col{	width:100%;}
+
+	/* Nonresponsive Columns */
+  .col75.nr{ width:75%;}
+	.col66.nr{ width:66.66666%;}
+  .col50.nr{ width:50%;}
+	.col33.nr{	width:33.333333%;}
+	.col25.nr{	width:25%;}
+
+  .hide-mobile{ display:none !important;}
+  .hide-desktop{  display: inherit !important;}
+}
+
+/**** End Responsive Layout ****/

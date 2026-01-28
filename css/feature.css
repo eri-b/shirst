@@ -1,0 +1,46 @@
+
+body{background-color:white;}
+
+.gayletter, #film{
+  max-width: 400px;
+  display: inline-block;
+  position: fixed;
+  top: 20px;
+  right: 30px;
+}
+
+#film{
+  letter-spacing:.02em;
+  color:black;
+  font-size:21px;
+}
+
+.content{
+  margin-top:35vh;
+	text-align:center;
+  background:white;
+  position:relative;
+  z-index: 2;
+  background:black;
+  padding:20px;
+}
+
+.content img{
+	max-width:100%;
+	height:auto;
+	margin:85vh auto;
+	display:block;
+}
+
+.content img:last-of-type{
+  margin-bottom:0;
+}
+
+.content img:first-of-type{
+  margin-top:0;
+}
+
+@media (max-width: 1000px) {
+  body{text-align:center;}
+
+}

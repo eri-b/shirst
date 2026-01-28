@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+ 	<meta charset="utf-8">
+ 	<title>Shirst - Quilt</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+ 	
+
+	<style>
+	*{box-sizing:border-box;}
+	body{background:black; margin:0; padding:0;}
+	
+	img{
+		max-width:100%;
+		
+		/*margin-left:50%;
+		transform: translateX(-50%);*/
+	}
+	
+	ul{
+		list-style-type:none;
+		margin:0;
+		padding:0; 
+		height:0;
+		overflow:hidden;
+	}
+	.success ul{height:auto;}
+
+	li{
+		display:block;
+		height:100vh;
+		background-position: center center;
+		border:50px solid black;
+		background-color:black;
+		background-repeat: no-repeat;
+		position:relative;
+		overflow:hidden;
+		/*opacity:0;*/
+		transition-delay:.5s;
+		transition:.8s;
+	}
+
+	.loaded.success li{opacity:1;}
+
+	li div{position:absolute; background-color: inherit;}
+
+	li.l{background-size:cover;}
+	li.p{background-size:contain;}
+
+	li:nth-child(1){background-image:url('images/l2.jpg');}
+	li:nth-child(1) div{width:80px; left: 56%; height:100vh;}
+
+	li:nth-child(2){background-image:url('images/p1.jpg');}
+	li:nth-child(2) div{width:100vw; top:69%; height:72px;}
+
+	li:nth-child(3){background-image:url('images/l1.jpg');}
+	li:nth-child(3) div{width:77px; left: 52%; height:100vh;}	
+
+	li:nth-child(4){background-image:url('images/p2.jpg');}
+	li:nth-child(4) div{width:100vw; top:68%; height:75px;}
+
+	li:nth-child(5){background-image:url('images/l3.jpg');}
+	li:nth-child(5) div{width:80px; left: 52%; height:100vh;}
+
+	li:nth-child(6){background-image:url('images/p3.jpg');}
+	li:nth-child(6) div{display:none;}
+
+	li:nth-child(7){background-image:url('images/l4.jpg');}
+	li:nth-child(7) div{width:80px; left: 54%; height:100vh;}
+
+	li:nth-child(8){background-image:url('images/p4.jpg');}
+	li:nth-child(8) div{width:100vw; top:47%; height:60px;}
+
+	li:nth-child(9){background-image:url('images/l5.jpg');}
+	li:nth-child(9) div{width:80px; left: 49%; height:100vh;}
+
+	li:nth-child(10){background-image:url('images/p5.jpg');}
+	
+	.credits div:nth-of-type(1){
+		/*background:rgba(255,255,255,.5); */
+	}
+
+	.credits div:nth-of-type(1){left:13%;}
+	.credits div:nth-of-type(2){left:11%;}
+	.credits div:nth-of-type(3),
+	.credits div:nth-of-type(4){left:74%;}
+
+	.credits div:nth-of-type(1),
+	.credits div:nth-of-type(3){top:22%;}
+	.credits div:nth-of-type(2),
+	.credits div:nth-of-type(4){top:72%;}
+
+	.credits{position:relative;}
+
+	.credits div{
+		display: inline-block; 
+		font-size: 12px; 
+		font-family: sans-serif; 
+		letter-spacing:.03em;
+		transform: translateY(-50%);
+		background:white;
+		padding:20px;
+		position:absolute;
+	}
+
+	a{text-decoration:none; color:inherit; font-weight:bold; transition:.2s;}
+	a:hover{color:blue;}
+
+	#intro{
+		height:100vh;
+		transition:.8s;
+		transition-delay:.5s;
+		position:relative;
+		background-image: url('images/vault.jpg');
+		background-position: center center;
+		background-size: cover;
+
+	}
+	#intro > div{ 
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform: translate(-50%,-50%);
+	}
+	.failure #intro > div{display:none;}
+	
+	.success #intro{height:0;}
+
+	button:nth-of-type(2){margin-left:100px;}
+	
+	button{
+		border:0; 
+		padding:20px; 
+		border-radius:4px; 
+		cursor:pointer; 
+		transition:.3s;
+		background:gold;
+	}
+
+	#under:hover{background:#ff5200;}
+	#over:hover{background:#4bd84b;}
+	
+	.showEverything .blocker{display:none;}
+	.showEverything #zerbe{background:pink;}
+
+/*	.fadebox img{transition: opacity .5s;}
+	.fadebox .lazyload, .fadebox .lazyloading {
+			opacity: 0;
+			
+		}
+
+	.fadebox img.lazyloaded { opacity: 1;}*/
+
+
+
+	@media (max-width: 750px){
+		li.l{background-size:contain;}
+		button{display:block; width:170px;}
+		button:nth-of-type(2){margin-left:0; margin-top:40px;}
+		
+
+		
+		li:nth-child(1) div{width:30px;}
+		
+		li:nth-child(2) div{
+			height: 52px;
+    		top: 63%;
+		}
+		
+		li:nth-child(3) div{width:27px;}	
+		
+		li:nth-child(4) div{height:45px;}
+		
+		li:nth-child(5) div{width:30px;}
+		
+		li:nth-child(6) div{display:none;}
+		
+		li:nth-child(7) div{width:30px;}
+		
+		li:nth-child(8) div{height:45px;}
+
+		li:nth-child(9) div{width:30px;}
+		
+		.credits div:nth-of-type(1),
+		.credits div:nth-of-type(2),
+		.credits div:nth-of-type(3),
+		.credits div:nth-of-type(4){left:50%; transform: translateX(-50%);top:0;}
+		.credits div:nth-of-type(1){margin-top:30%;}
+		.credits div{
+			margin-bottom:30px;
+			position:relative;
+			width:200px;
+			display:block;
+		}
+	}
+
+	</style>
+
+</head>
+  
+<body class="">
+
+<div id="intro">
+	<div>
+		<button id="under">Age: <strong>0 - 18 years</strong></button>	
+		<button id="over">Age: <strong>18 - 200 years</strong></button>
+	</div>
+</div>
+
+<ul>
+	
+	<li class="l">
+		<div class="blocker"></div>
+	</li>
+	<li class="p">
+		<div class="blocker"></div>
+	</li>
+	<li class="l">
+		<div class="blocker"></div>
+	</li>
+	<li class="p">
+		
+	</li>
+	<li class="l">
+		
+	</li>
+	<li class="p">
+		<div class="blocker"></div>
+	</li>
+	<li class="l">
+		<div class="blocker"></div>
+	<li class="p">
+		<div class="blocker"></div>
+	</li>
+	<li class="l">
+		<div class="blocker"></div>
+	</li>
+
+	<li class="p credits">
+		
+		<div>Shirts: <a href="http://shirst.com" target="_blank">Shirst</a></div>
+
+		<div id="zerbe"><span id="unlock">Model:</span> <a href="http://zerbetrue.com/" target="_blank">Stephen Zerbe</a></div>
+		
+		<div>Photos: <a href="http://chriswegman.com/" target="_blank">Chris Wegman</a></div>
+
+		<div>Quilt: <a href="http://theperfectnothingcatalog.com/" target="_blank">Frank Traynor</a></div>
+			
+			
+		
+	</li>
+
+</ul>
+
+
+<!-- <script type="text/javascript" src="js/lazysizes.min.js"></script> -->
+	<script type="text/javascript" src="js/jq.js"></script>
+	<script type="text/javascript" src="js/site.js"></script>
+
+</body>
+
+
+</html>
