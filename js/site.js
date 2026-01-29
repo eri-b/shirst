@@ -19,9 +19,9 @@ $(window).load(function() {
 	  	setTimeout(function(){ $('body').removeClass('i-tran2'); }, 400);
 	  	setTimeout(function(){ $('#h2a').addClass('newspeed'); }, 1400);
 	  	setTimeout(function(){ $('body').removeClass('i-tran3'); }, 1000);*/
-	
-	  	
-  		
+
+
+
 	});
 
 
@@ -54,22 +54,22 @@ $(document).ready(function () {
 		return false;
 	});
 
-	// 
+	//
 	$('#about').click(function(){
 	    $('.fixer').show();
 		// $('.shop-ctn').addClass('showfooter');
 		// $('#intro h1').addClass('addshadow');
 		// $('#intro h3').addClass('addshadow');
-		setTimeout(function(){ 
+		setTimeout(function(){
 			$('html, body').animate({
 				        scrollTop: $('.fixer').offset().top
 				    }, 1200);
 		}, 410);
-	    
+
 		return false;
 	});
 
-	
+
 	$('#h2a').on('click touchstart',function(){
 		$('html, body').animate({
     	scrollTop: $('#im1').offset().top - 0
@@ -77,7 +77,7 @@ $(document).ready(function () {
 		return false;
 	});
 
-	
+
 
 
 	// Date Section
@@ -103,11 +103,18 @@ $(document).ready(function () {
 	var n = weekday[d.getDay()];
 	var y = songs[d.getDay()];
 	$("#day").html(n);
-	
+
 
 
 
 	$('nav a').click(function(){
+		$('html, body').animate({
+    	scrollTop: $( $.attr(this, 'href') ).offset().top - 0
+		}, 1000);
+		return false;
+	});
+
+	$('.big-img-link').click(function(){
 		$('html, body').animate({
     	scrollTop: $( $.attr(this, 'href') ).offset().top - 0
 		}, 1000);

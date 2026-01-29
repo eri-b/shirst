@@ -384,6 +384,7 @@ html{height:auto;}
 	position:relative;
 	background-color:#fafafa;
 	padding-top:120px;
+	border-bottom: 1px solid #aaa;
 }
 
 .shop-ctn.lengthened{}
