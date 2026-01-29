@@ -111,7 +111,7 @@ body.i-tran3 #i-layer{
 	height:100vh;
 }
 #intro{
-	background: url('/images/big/home.jpg') top center / cover no-repeat;
+	background: url('../images/big/home.jpg') top center / cover no-repeat;
 }
 
 #intro h1{
@@ -597,7 +597,7 @@ footer.shopping{
 }
 
 .fixer .info{
-	background: url('/images/b5.png');
+	background: url('../images/b5.png');
 }
 
 .unfix{position:absolute;}
@@ -695,7 +695,7 @@ footer.shopping{
 	}*/
 
 	#intro{
-		background-image: url('/images/big/home_m.jpg');
+		background-image: url('../images/big/home_m.jpg');
 	}
 
 
