@@ -1,5 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap");
+
+:root {
+  --brand-font: "DM Sans", helvetica, sans-serif;
+}
+
 body{
-  font-family: "brandon-grotesque" !important;
+  font-family: var(--brand-font) !important;
   background-color:#fafafa;
   color:black;
 }
@@ -339,7 +345,7 @@ font-weight: 400;
     float:none;
 }
 .cart-wrapper .cart_box .button{
-    font-family: "brandon-grotesque" !important;
+    font-family: var(--brand-font) !important;
     font-weight: 400;
     letter-spacing: .02em;
     text-transform: capitalize;
@@ -530,7 +536,7 @@ h1.bc{
     position: fixed;
     z-index: 1;
     display: inline-block;
-    font-family: "brandon-grotesque", helvetica, sans-serif;
+    font-family: var(--brand-font);
     top: 15px;
     left: 30px;
     color:black;
@@ -548,7 +554,7 @@ h3.bc{
 	font-weight: 500;
     font-size: 20px;
     letter-spacing: .02em;
-    font-family: "brandon-grotesque", helvetica, sans-serif;
+    font-family: var(--brand-font);
     position: absolute;
     color: black;
     top: 103px;
@@ -563,7 +569,7 @@ h3.bc{
     font-weight: 500;
     letter-spacing: .02em;
     font-size: 15px;
-    font-family: "brandon-grotesque", helvetica, sans-serif;
+    font-family: var(--brand-font);
 }
 
 .product .cart{position:absolute;}
@@ -963,5 +969,3 @@ input#cart_discount_code {
 }
 
 }
-
-
